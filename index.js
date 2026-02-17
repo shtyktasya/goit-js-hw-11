@@ -1,6 +1,6 @@
 import{a as f,S as m,i as n}from"./assets/vendor--6n4cVRZ.js";(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&i(a)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}})();const d=f.create({baseURL:"https://pixabay.com/api/",params:{key:"54667939-2958d96aa870b71b0c19ccb5c",image_type:"photo",orientation:"horizontal",safesearch:!0}});async function g(s){return(await d.get("",{params:{q:s}})).data}const c=document.querySelector(".gallery"),l=document.querySelector(".loader"),y=new m(".gallery a",{captionDelay:250,captionsData:"alt"});function h(s){const r=s.map(({webformatURL:o,largeImageURL:i,tags:e,likes:t,views:a,comments:u,downloads:p})=>`<li class="gallery-item">
         <a href = "${i}" class="gallery-link">
-        <img src = "${o}" alt = "${e}" class="gallery=image" /></a>
+        <img src = "${o}" alt = "${e}" class="gallery-image" /></a>
         <div class="info" >
         <p>Likes: ${t}</p>
         <p>Views: ${a}</p>
